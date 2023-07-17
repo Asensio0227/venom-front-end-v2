@@ -49,7 +49,7 @@ const defaultURL = axios.create({
   headers: {
     Accept: 'application/json'
   },
-  baseURL: `/api/v1`,
+  baseURL: `https://venomv2.onrender.com`,
 });
 
 export const AppContext = createContext();
@@ -79,7 +79,7 @@ export function AppProvider({children}) {
     })
     try {
       const { data } = await axios.post(
-        `/api/v1/auth/register`
+        `https://venomv2.onrender.com/api/v1/auth/register`
         , currentUser,
         {
         headers: {
